@@ -1,0 +1,150 @@
+aside {
+    position: fixed;
+
+    overflow:auto;
+    min-height: 0;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    max-height: 100vh;
+}
+
+aside::-webkit-scrollbar {
+    width: 7px;
+    height: 8px;
+    background-color: #FFFFFF;
+}
+aside::-webkit-scrollbar-thumb {
+    background-color: #a0aabd;
+    border-radius: 20px;
+}
+
+.aside-esq img {
+    width: 28px;
+    height: 28px;
+}
+.aside-esq a{
+    text-decoration: none;
+    color: black;
+}
+
+.d-p-flex {
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.opc-atv {
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+hr {
+    margin-left: 16px;
+    margin-right: 10px;
+}
+
+.opc-atv img {
+    margin-right: 10px;
+}
+.opc-atv p {
+    margin: 0;
+    padding: 0;
+    margin-top: 2px;
+    font-weight: 500;
+    font-size: 15px;
+    display: block;
+}
+.opc-atv:hover{
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+.menu-opc-atv {
+    width: 30px;
+    height: 30px;
+    background-color: #e7e9ed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: none;
+    border-radius: 30px;
+}
+.menu-opc-atv img {
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+}
+#p-btn {
+    margin-left: 12px!important;
+}
+
+.seus-atalhos span {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.seus-atalhos span a{
+    color: #0077ff;
+    padding: 5px;
+}
+.seus-atalhos span a:hover{
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.seus-atalhos h3 {
+    color: #828282;
+    font-size: 18px;
+}
+
+.rotacao {
+    transform: rotate(180deg);
+}
+
+.img-perfil-contato {
+    width: 28px;
+    height: 28px;
+    border-radius: 20px;
+}
+
+.contatos h3, .cabecalho-aniversario h3{
+    color: #4F4F4F;
+    font-size: 20px;
+}
+
+.contatos .cabecalho-contato {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.contatos .cabecalho-contato span a {
+    display: inline-block;
+}
+.contatos .cabecalho-contato span a img {
+    width: 20px;
+    height: 20px;
+}
+
+.contatos .corpo-contato a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.corpo-aniversario a, .corpo-aniversario a:hover {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.corpo-aniversario p{
+    text-align: justify;
+}

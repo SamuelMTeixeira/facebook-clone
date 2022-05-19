@@ -1,0 +1,293 @@
+/* REFERENTES AO INDEX.PHP DO /USUARIO */
+.corpo-site {
+    margin-top: 55px;
+}
+
+.nav-margin {
+    margin-bottom: 60px;
+}
+
+.conteudos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .conteudos {
+        padding-left: 150px;
+    }
+}
+
+@media (min-width: 992px) {
+    .conteudos {
+        padding-left: 0px;
+    }
+}
+
+#cmp-new-post {
+    display: flex;
+    justify-content: center;
+}
+
+#cmp-new-post .box-publicacao {
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: 0px 0px 10px #CFCFCF;
+    border-bottom: 1px solid #d1d1d1;
+
+    padding: 10px;
+
+    border-radius: 10px;
+    width: 500px;
+}
+
+#cmp-new-post img {
+    width: 40px;
+    height: 40px;
+}
+
+#cmp-new-post input {
+    border: none;
+    border-radius: 20px;
+
+    text-align: start;
+    text-indent: 15px;
+
+    height: 40px;
+    width: 90%;
+
+    background-color: #f0f2f5;
+    color: #555555;
+}
+
+#cmp-new-post .box-publicacao #btnListPub {
+    display: flex;
+    justify-content: space-around;
+}
+
+#cmp-new-post .box-publicacao #btnListPub button {
+    display: flex;
+    margin-top: 5px;
+    border-radius: 5px;
+    height: 35px;
+}
+
+#cmp-new-post .box-publicacao #btnListPub button:hover {
+    background-color: #f2f2f2;
+}
+
+#cmp-new-post .box-publicacao #btnListPub button img {
+    width: 20px;
+    height: 20px;
+}
+
+#cmp-new-post .box-publicacao #btnListPub button p {
+    text-indent: 5px;
+    font-size: 15px;
+}
+
+#cmp-story {
+    display: flex;
+    justify-content: center;
+}
+
+#cmp-story .card-group .card {
+    margin-right: 10px !important;
+    height: 200px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    max-width: 120px;
+}
+
+#cmp-story .card-group .card .card-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 10px;
+}
+
+#card-criar-story .story-txt-overlay h5 {
+    padding-top: 20px;
+}
+
+#card-criar-story .story-txt-overlay {
+    border: none;
+    box-shadow: 0px 0px 10px #CFCFCF;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+#card-criar-story .story-txt-overlay button {
+    position: absolute;
+    top: -20;
+    left: 34%;
+    border: 4px solid #FFFFFF;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.img-perfil {
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: 0px 0px;
+}
+
+.story-txt-overlay {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.story-txt-overlay h5 {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 8px;
+}
+
+.postagem .img-perfil {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.postagem .card-cabecalho {
+    padding: 15px;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.postagem .card-cabecalho h5 {
+    text-indent: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.postagem .card-cabecalho h5:hover {
+    text-decoration: underline;
+}
+
+.postagem .card-cabecalho .info-horario-postagem {
+    margin-left: 10px;
+}
+
+.postagem .card-cabecalho .info-horario-postagem span {
+    display: flex;
+    align-items: center;
+}
+
+.postagem .card-cabecalho .info-horario-postagem img {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.postagem .info-horario-postagem .text-muted:hover {
+    text-decoration: underline;
+}
+
+#feed {
+    display: flex;
+    justify-content: center;
+}
+
+#feed .postagem {
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: 0px 0px 5px #CFCFCF;
+    border-bottom: 1px solid #d1d1d1;
+
+    border-radius: 10px;
+    width: 500px;
+}
+
+.card-corpo img {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 0;
+}
+
+.card-corpo p {
+    text-indent: 17px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.divisoes-cabecalho {
+    display: flex;
+    justify-content: space-between;
+}
+
+.divisoes-cabecalho button {
+    margin: 10px 15px 10px 10px;
+}
+.divisoes-cabecalho  button img {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.n-curtidas p {
+    padding: 5px;
+    margin: 0;
+}
+
+.opc-posts {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 0px 15px 0 15px;
+    border-top: 1px solid #CFCFCF;
+    border-bottom: 1px solid #CFCFCF;
+}
+
+.opc-posts button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.opc-posts button:hover {
+    background-color: #e9e9e9;
+}
+
+.opc-posts button img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.card-rodape {
+    margin: 15px;
+}
+
+.card-rodape img {
+    object-fit: cover;
+    object-position: 0px 0px;
+}
+
+.card-rodape input {
+    border: none;
+    border-radius: 20px;
+
+    text-align: start;
+    text-indent: 15px;
+
+    height: 40px;
+    width: 90%;
+
+    background-color: #f0f2f5;
+    color: #555555;
+}
+
+.card-rodape input:focus {
+    outline: none;
+}

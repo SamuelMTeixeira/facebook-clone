@@ -1,0 +1,217 @@
+nav {
+    border-bottom: #707070;
+    box-shadow: 0px -5px 20px #CFCFCF;
+}
+
+/* #A8A8A8 */
+.navbar {
+    position: relative;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.bg-light {
+    background-color: #FFFFFF!important;
+}
+
+.le,
+.lc,
+.ld {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.in-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    margin-left: 5px;
+    height: 40px;
+    background-color: #f0f2f5;
+}
+
+.in-search input {
+    outline: 0;
+    border: none;
+    min-width: 200px;
+}
+
+.lc img {
+    width: 28px;
+}
+
+.lc a, .ld {
+    cursor: pointer;
+    padding: 11px 35px 10px 35px;
+}
+
+.opc:hover {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+
+.opc-selected {
+    border-bottom: 3px solid #2379e5;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 10px 2px 5px;
+
+    cursor: pointer;
+}
+
+.profile:hover {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+.ld .profile p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 0;
+    padding-left: 10px;
+}
+
+.ld .profile img {
+    width: 28px;
+    height: 28px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+button {
+    border: none;
+}
+
+.menus {
+    width: 32px;
+    height: 32px;
+    background-color: #e7e9ed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 30px;
+}
+.menus:hover{
+    background-color: #e0e2e6;
+}
+
+.menus img {
+    width: 16px;
+    height: 16px;
+}
+
+.modal-dialog {
+    margin-top: 0;
+    margin-left: 0;
+    max-width: 320px;
+}
+.modal-content {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 10px 50px #888888;
+}
+
+.modal-backdrop.show {
+    opacity: 0;
+}
+.modal-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.modal-cabecalho button { 
+    background-color: transparent;
+}
+.modal-cabecalho button img {
+    width: 25px;
+}
+.modal-corpo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-corpo {
+    margin-top: 20px;
+    color: #a7a7a7;
+}
+
+.modal-dialog-data {
+    position: absolute;
+    top: 50px;
+    right: 45px;
+    min-width: 400px;
+}
+
+.ft-perfil img {
+    width: 60px;
+    height: 60px;
+}
+
+.desc-perfil h3 {
+    font-size: 1.04em;
+    margin-bottom: 2px;
+}
+.desc-perfil p {
+    font-size: 0.94em;
+    font-weight: 400;
+    color: #828282;
+}
+.modal-body .opc {
+    cursor: pointer;
+}
+hr {
+    margin: 5px;
+}
+
+.menu-opc {
+    width: 32px;
+    height: 32px;
+    background-color: #e7e9ed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 30px;
+}
+.menu-opc:hover{
+    background-color: #e0e2e6;
+}
+
+.menu-opc img {
+    width: 20px;
+    height: 20px;
+}
+
+.text-muted{
+    font-size: 13px;
+}
+
+.coluna {
+    height: 40px;
+}
+
+.img-perfil {
+    border-radius: 20px;
+}
