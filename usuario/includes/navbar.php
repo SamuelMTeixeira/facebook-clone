@@ -72,7 +72,7 @@
         </nav>
     </header>
 
-    <!-- Modal -->
+    <!-- Modal Pesquisa -->
     <div class="modal fade" id="modalSearch" tabindex="-1" aria-labelledby="modalSearch" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -94,7 +94,7 @@
     </div>
 
 
-    <!-- Modal -->
+    <!-- Modal Perfil -->
     <div class="modal fade" id="modalData" tabindex="-1" aria-labelledby="modalData" aria-hidden="true">
         <div class="modal-dialog modal-dialog-data">
             <div class="modal-content">
@@ -112,9 +112,9 @@
 
                     <div class="row opc pt-2">
                         <div class="col-md-1 d-flex justify-content-center align-items-center">
-                                <button class="ms-2 mb-3 menu-opc">
-                                    <img src="../icons/messenger.png">
-                                </button>
+                            <button class="ms-2 mb-3 menu-opc">
+                                <img src="../icons/messenger.png">
+                            </button>
                         </div>
                         <div class="col-md-11 desc-perfil justify-content-center align-items-center">
                             <h3>Dar feedback</h3>
@@ -125,9 +125,9 @@
 
                     <div class="row opc coluna">
                         <div class="col-md-1 d-flex justify-content-center align-items-center">
-                                <button class="ms-2 menu-opc">
-                                    <img src="../icons/configuracoes.png">
-                                </button>
+                            <button class="ms-2 menu-opc">
+                                <img src="../icons/configuracoes.png">
+                            </button>
                         </div>
                         <div class="col-md-11 desc-perfil d-flex align-items-center">
                             <h3>Configurações e privacidade</h3>
@@ -136,9 +136,9 @@
 
                     <div class="row opc coluna">
                         <div class="col-md-1 d-flex justify-content-center align-items-center">
-                                <button class="ms-2 menu-opc">
-                                    <img src="../icons/duvida.png">
-                                </button>
+                            <button class="ms-2 menu-opc">
+                                <img src="../icons/duvida.png">
+                            </button>
                         </div>
                         <div class="col-md-11 desc-perfil d-flex align-items-center">
                             <h3>Ajuda e suporte</h3>
@@ -147,9 +147,9 @@
 
                     <div class="row opc coluna">
                         <div class="col-md-1 d-flex justify-content-center align-items-center">
-                                <button class="ms-2 menu-opc">
-                                    <img src="../icons/lua.png">
-                                </button>
+                            <button class="ms-2 menu-opc">
+                                <img src="../icons/lua.png">
+                            </button>
                         </div>
                         <div class="col-md-11 desc-perfil d-flex align-items-center">
                             <h3>Tela e acessibilidade</h3>

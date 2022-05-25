@@ -1,5 +1,9 @@
 <?php
-session_start();
+session_start(
+    [
+        'cookie_lifetime' => 1,
+    ]
+);
 if (!isset($_SESSION['id'])) {
     header('Location: ../index.php');
     exit();
@@ -8,13 +12,14 @@ if (!isset($_SESSION['id'])) {
 // CHAMA A CONEXÃO MYSQL "APENAS UMA VEZ NA PAGE"
 include_once("../dbConexao.php");
 
-// EFETUA O CRUD
-$sql = "SELECT * FROM usuarios WHERE (cod = '" . $_SESSION['id'] . "')";
+// EFETUA O SELECT
+$sql = "SELECT * FROM usuario WHERE (cod = '" . $_SESSION['id'] . "')";
 $resultado = $conexao->query($sql);
 $usuario = mysqli_fetch_assoc($resultado);
 
 // VARIAVEIS COM OS NOMES
 $nomeUsuario = $usuario['nome'];
+
 ?>
 
 
@@ -107,8 +112,14 @@ $nomeUsuario = $usuario['nome'];
                         <!-- AREA DE POSTAGEM -->
                         <section id="cmp-new-post">
                             <div class="box-publicacao">
-                                <img class="img-perfil" src="../imgs/perfil-undefined.png">
-                                <input type="button" value="<?php echo 'No que você está pensando, ' . $nomeUsuario . '?';  ?>">
+                                <div class="row">
+                                    <div class="col-2 d-flex justify-content-center">
+                                        <img class="img-perfil" src="../imgs/perfil-undefined.png">
+                                    </div>
+                                    <div class="col-10">
+                                        <input class="w-100" type="button" value="<?php echo 'No que você está pensando, ' . $nomeUsuario . '?';  ?>">
+                                    </div>
+                                </div>
                                 <hr>
                                 <div id="btnListPub">
                                     <button class="btn">

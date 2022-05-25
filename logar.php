@@ -1,12 +1,16 @@
     <?php
-    session_start();
-    $user_login = $_POST['login'];
+    session_start(
+        [
+            'cookie_lifetime' => 1,
+        ]
+    );
+    $user_email = $_POST['email'];
     $user_senha = $_POST['senha'];
 
     // CHAMA A CONEXÃO MYSQL "APENAS UMA VEZ NA PAGE"
     include_once("dbConexao.php");
 
-    $sql = "SELECT * FROM usuarios WHERE nome LIKE '" . $user_login . "' AND senha LIKE MD5('" . $user_senha . "')";
+    $sql = "SELECT * FROM usuario WHERE email LIKE '" . $user_email . "' AND senha LIKE MD5('" . $user_senha . "')";
     $resultado = $conexao->query($sql);
 
     if (mysqli_num_rows($resultado) < 1) {

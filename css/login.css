@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+}
+
+.cmp-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cmp-login .cmp-login-logo h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    text-align: start;
+    padding-left: 25px;
+}
+
+.box-login {
+    margin: 5em 5em;
+    padding: 1.2em 1.2em;
+
+    background-color: white;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #CFCFCF;
+    border: none;
+}
+
+.box-login input {
+    margin-bottom: 12px;
+}
+
+.campo-dados {
+    border-radius: 6px;
+    border: 1px solid #CFCFCF;
+
+    padding: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+
+    letter-spacing: 0.5px;
+}
+
+.campo-dados::placeholder {
+    color: #9C9C9C;
+}
+
+.campo-dados:focus::placeholder {
+    color: #CFCFCF;
+}
+
+.campo-dados:focus {
+    outline: 0;
+    border-color: #1877f2;
+    caret-color: #1877f2;
+}
+
+a {
+    text-align: center;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn-lg {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+#criar-conta {
+    margin: 0 5em;
+}
+
+.btn-success {
+    background-color: #42b72a;
+    border-color: #42b72a;
+}
+
+.btn-success:hover {
+    background-color: #359b21;
+    border-color: #359b21;
+}
+
+.link-simples {
+    padding-bottom: 5px;
+    display: inline;
+
+    padding: 0;
+    margin: 0;
+    text-decoration: none !important;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: black !important;
+    border: none;
+}
+
+.link-simples:hover {
+    color: black !important;
+}
+
+#criar-conta a,
+#criar-conta p {
+    display: inline;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    text-align: justify;
+}
+.modCad {
+    display: flex;
+    align-items: flex-start!important;
+}
+.modal-footer {
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+}
+
+.txt-desc {
+    text-align: justify;
+    font-size: 12px;
+    color: #3f3f3f;
+}
+.modal-body label {
+    font-size: 14px;
+}
+.modal-body .form-label label {
+    font-size: 18px;
+}
+.radioButton {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #CFCFCF;
+
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

@@ -1,27 +1,27 @@
 <?php
-    session_start();
+session_start();
 
-    $user_login = $_POST['login'];
-    $user_senha = md5( $_POST['senha']);
-    $user_email = $_POST['email'];
+$user_nome = $_POST['nome'];
+$user_sobrenome = $_POST['sobrenome'];
+$user_senha = md5($_POST['senha']);
+$user_email = $_POST['email'];
 
-    $servidor = 'localhost';
-    $usuario = "root";
-    $senha = "";
-    $database = "edu";
+$user_dia = $_POST['dia'];
+$user_mes = $_POST['mes'];
+$user_ano = $_POST['ano'];
 
-    $conexao = mysqli_connect($servidor, $usuario, $senha, $database);
+$user_sexo = $_POST['sexo'];
 
-    $sql = "INSERT INTO usuarios (nome, senha, email, tipo) VALUES ('".$user_login."','".$user_senha."','".$user_email."','0')";
+// CHAMA A CONEXÃO MYSQL "APENAS UMA VEZ NA PAGE"
+include_once("dbConexao.php");
 
-    $resultado = mysqli_query($conexao, $sql);
+$sql = "INSERT INTO usuario (nome, sobrenome, senha, email, sexo, aniversario, tipo) VALUES ('" . $user_nome . "','" . $user_sobrenome . "', '" . $user_senha . "','" . $user_email . "', '" . $user_sexo . "', '" . $user_ano . "-" . $user_mes . "-" . $user_dia . "', '0')";
+$resultado = $conexao->query($sql);
 
-    if ($resultado == false) {
-        echo "<h4>Erro: ".mysqli_error($conexao)."</h4>";
-    } else {
-        $_SESSION['user_nome'] = $user_login;
-
-        $_SESSION['id'] = 
-        header('Location: usuario/index.php');
-    }
-    ?>
+if ($resultado == false) {
+    echo "<h4>Erro: " . mysqli_error($conexao) . "</h4>";
+} else {
+    // O insert_id PEGA O ID GERADO NO INSERT DO SQL
+    $_SESSION['id'] = $conexao->insert_id;
+    header('Location:usuario/index.php');
+}

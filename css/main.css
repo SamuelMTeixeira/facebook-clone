@@ -227,7 +227,8 @@
 .divisoes-cabecalho button {
     margin: 10px 15px 10px 10px;
 }
-.divisoes-cabecalho  button img {
+
+.divisoes-cabecalho button img {
     width: 18px;
     height: 18px;
     cursor: pointer;
@@ -290,4 +291,10 @@
 
 .card-rodape input:focus {
     outline: none;
+}
+
+@media (min-width: 400px) {
+    #cmp-story .card-group {
+        display: flex;
+    }
 }
