@@ -11,7 +11,7 @@
 
         <a href="#" class="opc-atv">
             <span class="d-p-flex">
-                <img class="img-perfil" src="../imgs/perfil-undefined.png">
+            <?php echo "<img class='img-perfil' src='"."../perfil/". $username . "/foto-perfil.jpg"."' alt='foto-do-perfil'>";?>
                 <?php echo "<p>" . $nomeUsuario . "</p>";  ?>
             </span>
         </a>

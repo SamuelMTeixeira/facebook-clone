@@ -21,9 +21,9 @@
         $_SESSION['id'] = $usuario['cod'];
 
         if ($usuario['tipo'] == 0)
-            header('Location:usuario/index.php');
+            header('Location:feed/');
         elseif ($usuario['tipo'] == 1)
-            header('Location:usuario/index.php');
+            header('Location:feed/');
         else {
             echo "Permissão incorreta";
             exit();

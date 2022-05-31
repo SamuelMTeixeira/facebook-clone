@@ -49,6 +49,7 @@ hr {
 
 .opc-atv img {
     margin-right: 10px;
+    border-radius: 20px;
 }
 .opc-atv p {
     margin: 0;
@@ -110,7 +111,7 @@ hr {
 .img-perfil-contato {
     width: 28px;
     height: 28px;
-    border-radius: 20px;
+    margin-top: 7px;
 }
 
 .contatos h3, .cabecalho-aniversario h3{

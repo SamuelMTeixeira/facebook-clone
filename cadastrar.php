@@ -21,7 +21,29 @@ $resultado = $conexao->query($sql);
 if ($resultado == false) {
     echo "<h4>Erro: " . mysqli_error($conexao) . "</h4>";
 } else {
-    // O insert_id PEGA O ID GERADO NO INSERT DO SQL
-    $_SESSION['id'] = $conexao->insert_id;
-    header('Location:usuario/index.php');
+    //O insert_id PEGA O ID GERADO NO INSERT DO SQL E 
+    $newId = $conexao->insert_id;
+
+    $sql = "SELECT * FROM usuario WHERE cod = " . $newId;
+    $resultado = $conexao->query($sql);
+    $usuario = mysqli_fetch_assoc($resultado);
+
+
+    // CRIA A PASTA DO PERFIL DO USUARIO E ADD A FOTO
+
+    // CRIA UM NOME DE USUARIO E CRIA A PASTA DO PERFIL DELA
+    $username = strtolower($usuario['nome']) . "-" . strtolower($usuario['sobrenome']) . "-" . $newId;
+    mkdir('perfil/' . $username, 0755, true);
+
+    // COLOCA A FOTO DE PERFIL PADRAO NELA
+    if (copy('media/perfil-undefined.jpg', 'perfil/' . $username . '/foto-perfil.jpg')) {
+
+        // CADASTRA O USERNAME DO PERFIL DO USUARIO
+        $sql = "UPDATE usuario SET username = '".$username."' WHERE cod = " . $newId;
+        $resultado = $conexao->query($sql);
+
+        // INICIAR A SESSÃO E MANDA PARA A PAGINA INICIAL
+        $_SESSION['id'] = $newId;
+        header('Location:feed/');
+    }
 }

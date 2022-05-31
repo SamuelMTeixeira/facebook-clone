@@ -146,26 +146,24 @@ button {
 .modal-cabecalho button img {
     width: 25px;
 }
-.modal-corpo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .modal-corpo {
     margin-top: 20px;
     color: #a7a7a7;
+    width: 100%;
 }
 
 .modal-dialog-data {
     position: absolute;
     top: 50px;
     right: 45px;
-    min-width: 400px;
+    min-width: 350px;
 }
 
 .ft-perfil img {
     width: 60px;
     height: 60px;
+    border-radius: 30px;
 }
 
 .desc-perfil h3 {
@@ -214,4 +212,60 @@ hr {
 
 .img-perfil {
     border-radius: 20px;
+}
+
+.list-pesquisas-cabecalho {
+    margin: 0;
+}
+.list-pesquisas-cabecalho h3{
+    color: #0c0c0c;
+    font-size: 18px;
+    margin: 0;
+}
+.list-pesquisas-cabecalho button{
+    color: #0077ff;
+    background-color: transparent;
+}
+.list-pesquisas-cabecalho button:hover{
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+#tabela-pesquisas button{
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tabela-pesquisas img{
+    width: 20px;
+}
+
+#tabela-pesquisas tbody tr {
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 5px;
+}
+#tabela-pesquisas th {
+    width: 35px;
+    height: 35px;
+}
+#tabela-pesquisas td{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 14px;
+}
+
+#tabela-pesquisas tr:hover {
+    background-color: #dadada;
+}
+
+.qtd-notificacoes {
+    position: absolute;
+    margin-left: 45px;
+    top: 12;
+    font-size: 11px;
 }

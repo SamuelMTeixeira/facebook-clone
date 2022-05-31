@@ -37,7 +37,7 @@
                     </form>
 
                     <hr>
-                    <div class="d-grid gap-2 col-6 mx-auto">
+                    <div class="container-fluid d-flex justify-content-center">
                         <input class="btn btn-success btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#modalCad" value="Criar nova conta">
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                         <p class="txt-desc mt-3">Ao clicar em Cadastre-se, você concorda com nossos Termos, Política de Dados e Política de Cookies. Você poderá receber notificações por SMS e cancelar isso quando quiser.</p>
                     </div>
                     <div class="modal-footer">
-                        <input type="submit" class="btn btn-success btn-lg">
+                        <input type="submit" class="btn btn-success btn-lg" value="Cadastre-se">
                     </div>
                 </form>
             </div>
