@@ -28,7 +28,6 @@ if ($resultado == false) {
     $resultado = $conexao->query($sql);
     $usuario = mysqli_fetch_assoc($resultado);
 
-
     // CRIA A PASTA DO PERFIL DO USUARIO E ADD A FOTO
 
     // CRIA UM NOME DE USUARIO E CRIA A PASTA DO PERFIL DELA
@@ -39,11 +38,14 @@ if ($resultado == false) {
     if (copy('media/perfil-undefined.jpg', 'perfil/' . $username . '/foto-perfil.jpg')) {
 
         // CADASTRA O USERNAME DO PERFIL DO USUARIO
-        $sql = "UPDATE usuario SET username = '".$username."' WHERE cod = " . $newId;
+        $sql = "UPDATE usuario SET username = '" . $username . "' WHERE cod = " . $newId;
         $resultado = $conexao->query($sql);
 
-        // INICIAR A SESSÃO E MANDA PARA A PAGINA INICIAL
-        $_SESSION['id'] = $newId;
-        header('Location:feed/');
+        // CRIA A INDEX DO USUÁRIO
+        if (copy('media/perfil-undefined.jpg', 'perfil/' . $username . '/includes')) {
+            // INICIAR A SESSÃO E MANDA PARA A PAGINA INICIAL
+            $_SESSION['id'] = $newId;
+            header('Location:feed/');
+        }
     }
 }

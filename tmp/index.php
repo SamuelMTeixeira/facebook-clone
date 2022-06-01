@@ -31,7 +31,7 @@ $username = $usuario['username'];
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Facebook</title>
+    <title><?php echo $nomeCompleto ?></title>
     <!-- Ícone da página -->
     <link rel="icon" href="../imgs/facebook-icon.png">
 
@@ -113,94 +113,7 @@ $username = $usuario['username'];
                             </div>
                         </section>
 
-                        <!-- AREA DE POSTAR NOVO POST -->
-                        <section id="cmp-new-post">
-                            <div class="box-publicacao">
-                                <div class="row" data-bs-toggle="modal" data-bs-target="#modalCriarPub">
-                                    <div class="col-2 d-flex justify-content-center">
-                                        <?php echo "<img class='img-perfil' src='" . "../perfil/" . $username . "/foto-perfil.jpg" . "' alt='foto-do-perfil'>"; ?>
-                                    </div>
-                                    <div class="col-10">
-                                        <input class="w-100" type="button" value="<?php echo 'No que você está pensando, ' . $nomeUsuario . '?';  ?>">
-                                    </div>
-                                </div>
-                                <hr>
-                                <div id="btnListPub">
-                                    <button class="btn">
-                                        <img src="../icons/filmadora.png">
-                                        <p>Vídeo ao vivo</p>
-                                    </button>
-                                    <button class="btn">
-                                        <img src="../icons/galeria.png">
-                                        <p>Foto/video</p>
-                                    </button>
-                                    <button class="btn d-none d-lg-flex">
-                                        <img src="../icons/rosto-sorridente.png">
-                                        <p>Sentimento/atividade</p>
-                                    </button>
-                                </div>
-
-                            </div>
-                        </section>
-
-                        <!-- FEED DE NOTICIAS -->
-                        <section class="mt-4 mb-5" id="feed">
-
-                            <?php
-                            // PEGA TODOS OS POST QUE TEM A VER COM O USUARIO (POR ENQUANTO SO OS QUE O USUARIO POSTA)
-                            $sqlPesquisas = "SELECT p.cod AS codPub, p.texto, p.imagem, DATE_FORMAT(p.dataPostagem, '%d do %m às %H:%i') AS dataPub, p.qtdLikes, u.nome, u.sobrenome, u.username FROM postagem p INNER JOIN usuario u ON u.cod = p.codUsuario WHERE (codUsuario =  '" . $_SESSION['id'] . "') ORDER BY p.dataPostagem DESC";
-                            $resultado = $conexao->query($sqlPesquisas);
-
-                            // SE NÃO HOUVER NENHUM POST
-                            if (mysqli_num_rows($resultado) < 1) {
-                                echo "<p class='text-center texto-conclusao mt-4'>Isso é tudo por enquanto, adicione novos amigos para acompanhas suas públicações de perto!</p>";
-                            }
-                            // EXIBE TODOS OS POSTS
-                            else {
-                                while ($publicacao = mysqli_fetch_assoc($resultado)) {
-                                    echo "<section class='container-postagem'> <div class='postagem mb-4'> <div class='divisoes-cabecalho'>";
-                                    echo "<div class='card-cabecalho'>";
-
-                                    // CABECALHO DA PUBLICAÇÃO
-                                    echo "<img src='../perfil/" . $publicacao['username'] . "/foto-perfil.jpg' class='card-img-top img-perfil' alt='Imagem'>";
-                                    echo "<div class='dados-usuario-post'>";
-                                    echo "<h5 class='card-title'>" . $publicacao['nome'] . " " . $publicacao['sobrenome'] . "</h5>";
-
-                                    echo "<span class='info-horario-postagem'> <small class='text-muted'>";
-                                    echo $publicacao['dataPub'] . " · </small>";
-                                    echo "<img src='../icons/publico.png'> </span> </div> </div>";
-
-                                    echo "<button class='btn' type='button'> ";
-                                    echo "<img src='../icons/ver-mais.png'> </button> </div>";
-
-                                    // MIDIA DO POST
-                                    echo "<div class='card-corpo'>";
-                                    echo "<p>" . $publicacao['texto'] . "</p>";
-
-                                    if ($publicacao['imagem'] == "y") {
-                                        echo "<img src='../media/" . $publicacao['codPub'] . "/img-1' name='imagem' class='img-fluid' alt='Imagem'>";
-                                    }
-
-                                    echo "<span class='n-curtidas'>  <p>" . $publicacao['qtdLikes'] . " curtidas</p> </span>  <div class='opc-posts'>";
-
-                                    echo "<button class='btn'> <img src='../icons/like.png'> Curtir </button>";
-
-                                    echo "<button class='btn'> <img src='../icons/comentar.png'> Comentar </button>";
-
-                                    echo " <button class='btn'>  <img src='../icons/compartilhar.png'> Compartilhar </button>";
-
-                                    echo "</div> </div>";
-
-                                    // COMENTARIO DO POST
-                                    echo "<div class='card-rodape'>";
-                                    echo "<img src='../perfil/" . $publicacao['username'] . "/foto-perfil.jpg' class='img-perfil' alt='Imagem'>";
-                                    echo "<input type='text' placeholder='Escreva um comentário público...'>";
-
-                                    echo "</div>  </div> </section>";
-                                }
-                            }
-                            ?>
-                        </section>
+                        
                     </div>
                 </div>
 

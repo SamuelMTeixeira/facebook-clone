@@ -37,6 +37,5 @@ if ($resultado === false) {
         $resultado = $conexao->query($sql);
     }
 
-
     header('Location:../feed/index.php');
 }

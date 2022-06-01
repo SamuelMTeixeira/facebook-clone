@@ -300,3 +300,11 @@
     font-family: Arial, Helvetica, sans-serif;
     color: #a8a8a8;
 }
+.menu-sub-opc img {
+    cursor: pointer;
+    width: 25px;
+}
+.menu-sub-opc button {
+    border-radius: 30px;
+    background: none;
+}

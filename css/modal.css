@@ -35,7 +35,8 @@
 }
 
 #modalCriarPub .cmp-postagem textarea:focus{
-    outline: none;
+    border: none;
+    outline: none!important;
 }
 .menu-opc-publicacoes {
     border: 1px solid #dadada;
