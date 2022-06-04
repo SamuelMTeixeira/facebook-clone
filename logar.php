@@ -1,32 +1,33 @@
-    <?php
-    session_start(
-        [
-            'cookie_lifetime' => 1,
-        ]
-    );
-    $user_email = $_POST['email'];
-    $user_senha = $_POST['senha'];
+<?php
+session_start(
+    [
+        'cookie_lifetime' => 4000,
+    ]
+);
 
-    // CHAMA A CONEXÃO MYSQL "APENAS UMA VEZ NA PAGE"
-    include_once("dbConexao.php");
+$user_email = $_POST['email'];
+$user_senha = $_POST['senha'];
 
-    $sql = "SELECT * FROM usuario WHERE email LIKE '" . $user_email . "' AND senha LIKE MD5('" . $user_senha . "')";
-    $resultado = $conexao->query($sql);
+// CHAMA A CONEXÃO MYSQL "APENAS UMA VEZ NA PAGE"
+include_once("dbConexao.php");
 
-    if (mysqli_num_rows($resultado) < 1) {
-        header('Location:index.php');
+$sql = "SELECT * FROM usuario WHERE email LIKE '" . $user_email . "' AND senha LIKE MD5('" . $user_senha . "')";
+$resultado = $conexao->query($sql);
+
+if (mysqli_num_rows($resultado) < 1) {
+    header('Location:index.php');
+    die();
+} else {
+    $usuario = mysqli_fetch_assoc($resultado);
+
+    $_SESSION['id'] = $usuario['cod'];
+
+    if ($usuario['tipo'] == 0) {
+        header('Location: feed/');
+    } elseif ($usuario['tipo'] == 1) {
+        header('Location: feed/');
     } else {
-        $usuario = mysqli_fetch_assoc($resultado);
-
-        $_SESSION['id'] = $usuario['cod'];
-
-        if ($usuario['tipo'] == 0)
-            header('Location:feed/');
-        elseif ($usuario['tipo'] == 1)
-            header('Location:feed/');
-        else {
-            echo "Permissão incorreta";
-            exit();
-        }
+        echo "Permissão incorreta";
+        exit();
     }
-    ?>
+}

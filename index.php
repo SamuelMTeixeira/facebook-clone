@@ -3,12 +3,16 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Facebook - Entre ou cadastre-se</title>
 
     <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Bootstrap Ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 
     <!-- Custumização CSS -->
     <link rel="stylesheet" href="css/login.css">
@@ -49,9 +53,6 @@
             </div>
         </section>
     </main>
-
-    <script src="./css/bootstrap.bundle.min.js"></script>
-
 
     <!-- Modal Do cadastro -->
     <div class="modal fade" id="modalCad" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -96,7 +97,7 @@
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <select class="form-select" id="cad-niverAno"  name="ano" required>
+                                <select class="form-select" id="cad-niverAno" name="ano" required>
                                     <option selected disabled value="">Ano</option>
                                 </select>
                             </div>
@@ -130,6 +131,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 </body>
 

@@ -1,7 +1,7 @@
 aside {
     position: fixed;
 
-    overflow:auto;
+    overflow: auto;
     min-height: 0;
     transition-duration: 0.2s;
     transition-timing-function: linear;
@@ -13,6 +13,7 @@ aside::-webkit-scrollbar {
     height: 8px;
     background-color: #FFFFFF;
 }
+
 aside::-webkit-scrollbar-thumb {
     background-color: #a0aabd;
     border-radius: 20px;
@@ -22,7 +23,8 @@ aside::-webkit-scrollbar-thumb {
     width: 28px;
     height: 28px;
 }
-.aside-esq a{
+
+.aside-esq a {
     text-decoration: none;
     color: black;
 }
@@ -51,6 +53,7 @@ hr {
     margin-right: 10px;
     border-radius: 20px;
 }
+
 .opc-atv p {
     margin: 0;
     padding: 0;
@@ -59,7 +62,8 @@ hr {
     font-size: 15px;
     display: block;
 }
-.opc-atv:hover{
+
+.opc-atv:hover {
     background-color: #f2f2f2;
     border-radius: 10px;
 }
@@ -72,17 +76,19 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     border: none;
     border-radius: 30px;
 }
+
 .menu-opc-atv img {
     width: 10px;
     height: 10px;
     margin-right: 8px;
 }
+
 #p-btn {
-    margin-left: 12px!important;
+    margin-left: 12px !important;
 }
 
 .seus-atalhos span {
@@ -90,11 +96,13 @@ hr {
     align-items: center;
     justify-content: space-around;
 }
-.seus-atalhos span a{
+
+.seus-atalhos span a {
     color: #0077ff;
     padding: 5px;
 }
-.seus-atalhos span a:hover{
+
+.seus-atalhos span a:hover {
     background-color: #f2f2f2;
     border-radius: 5px;
 }
@@ -114,7 +122,8 @@ hr {
     margin-top: 7px;
 }
 
-.contatos h3, .cabecalho-aniversario h3{
+.contatos h3,
+.cabecalho-aniversario h3 {
     color: #4F4F4F;
     font-size: 20px;
 }
@@ -124,28 +133,33 @@ hr {
     align-items: center;
     justify-content: space-around;
 }
-.contatos .cabecalho-contato span a {
+
+.contatos .cabecalho-contato span {
     display: inline-block;
-}
-.contatos .cabecalho-contato span a img {
-    width: 20px;
-    height: 20px;
+    cursor: pointer;
 }
 
-.contatos .corpo-contato a{
+.contatos .cabecalho-contato span svg {
+    width: 1.15em;
+    height: 1.15em;
+    margin-right: 5px;
+}
+
+.contatos .corpo-contato a {
     text-decoration: none;
     color: black;
     display: flex;
     align-items: center;
 }
 
-.corpo-aniversario a, .corpo-aniversario a:hover {
+.corpo-aniversario a,
+.corpo-aniversario a:hover {
     text-decoration: none;
     color: black;
     display: flex;
     align-items: center;
 }
 
-.corpo-aniversario p{
+.corpo-aniversario p {
     text-align: justify;
 }

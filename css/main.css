@@ -71,15 +71,36 @@
     margin-top: 5px;
     border-radius: 5px;
     height: 35px;
+    border: none;
+}
+
+
+#cmp-new-post .box-publicacao #btnListPub .btn {
+    border: none;
 }
 
 #cmp-new-post .box-publicacao #btnListPub button:hover {
     background-color: #f2f2f2;
 }
 
-#cmp-new-post .box-publicacao #btnListPub button img {
-    width: 20px;
-    height: 20px;
+#cmp-new-post .box-publicacao #btnListPub button svg {
+    width: 1.3em;
+    height: 1.3em;
+}
+
+.color-verde,
+.color-verde:hover {
+    color: green;
+}
+
+.color-amarelo,
+.color-amarelo:hover {
+    color: #ddce00;
+}
+
+.btn-vermelho,
+.btn-vermelho:hover {
+    color: #dc3545;
 }
 
 #cmp-new-post .box-publicacao #btnListPub button p {
@@ -194,7 +215,7 @@
     text-decoration: underline;
 }
 
-#feed .container-postagem{
+#feed .container-postagem {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,6 +273,10 @@
     margin: 5px;
     border-radius: 10px;
 }
+.opc-posts .btn {
+    border: none;
+}
+
 
 .opc-posts button:hover {
     background-color: #e9e9e9;
@@ -295,15 +320,18 @@
         display: flex;
     }
 }
-.texto-conclusao  {
+
+.texto-conclusao {
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
     color: #a8a8a8;
 }
+
 .menu-sub-opc img {
     cursor: pointer;
     width: 25px;
 }
+
 .menu-sub-opc button {
     border-radius: 30px;
     background: none;
