@@ -15,7 +15,7 @@ $sql = "SELECT * FROM usuario WHERE email LIKE '" . $user_email . "' AND senha L
 $resultado = $conexao->query($sql);
 
 if (mysqli_num_rows($resultado) < 1) {
-    header('Location:index.php');
+    header('Location:index.php?login=wrong');
     die();
 } else {
     $usuario = mysqli_fetch_assoc($resultado);

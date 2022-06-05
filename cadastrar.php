@@ -32,21 +32,16 @@ if ($resultado == false) {
 
     // CRIA UM NOME DE USUARIO E CRIA A PASTA DO PERFIL DELA
     $username = strtolower($usuario['nome']) . "-" . strtolower($usuario['sobrenome']) . "-" . $newId;
-    mkdir('perfil/' . $username, 0755, true);
 
     // COLOCA A FOTO DE PERFIL PADRAO NELA
-    if (copy('media/perfil-undefined.jpg', 'perfil/' . $username . '/foto-perfil.jpg')) {
+    if (copy('media/perfil-undefined.jpg', 'media/photo/' . $username . '.jpg')) {
 
         // CADASTRA O USERNAME DO PERFIL DO USUARIO
         $sql = "UPDATE usuario SET username = '" . $username . "' WHERE cod = " . $newId;
         $resultado = $conexao->query($sql);
 
-        // CRIA A INDEX DO USUÁRIO
-        if (copy('media/perfil-undefined.jpg', 'perfil/' . $username . '/includes')) {
-            // INICIAR A SESSÃO E MANDA PARA A PAGINA INICIAL
-            $_SESSION['id'] = $newId;
-            header('Location:feed/');
-        }
+        // INICIAR A SESSÃO E MANDA PARA A PAGINA INICIAL
+        $_SESSION['id'] = $newId;
+        header('Location:feed/');
     }
 }
-?>

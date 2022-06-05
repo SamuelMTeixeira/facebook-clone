@@ -40,7 +40,7 @@
                 <section class="ld">
                     <a href="#" class="d-none d-lg-flex">
                         <span class="profile">
-                            <?php echo "<img class='img-perfil' src='" . "../perfil/" . $username . "/foto-perfil.jpg" . "' alt='foto-do-perfil'>"; ?>
+                            <?php echo "<img class='img-perfil' src='" . "../media/photo/" . $username . ".jpg" . "' alt='foto-do-perfil'>"; ?>
 
                             <?php echo "<p>" . $nomeUsuario . "</p>";  ?>
                         </span>
@@ -79,7 +79,7 @@
                         <ul class="dropdown-menu" aria-labelledby="dropdownOpcoes" id="dpOPC">
                             <li>
                                 <span class="dropdown-item">
-                                    <?php echo "<img src='" . "../perfil/" . $username . "/foto-perfil.jpg" . "' class='ft-perfil' alt='foto-do-perfil'>"; ?>
+                                    <?php echo "<img src='" . "../media/photo/" . $username . ".jpg" . "' class='ft-perfil' alt='foto-do-perfil'>"; ?>
 
                                     <div class="desc-perfil">
                                         <?php echo "<p class='name-profile'>" . $nomeCompleto . "</p>";  ?>

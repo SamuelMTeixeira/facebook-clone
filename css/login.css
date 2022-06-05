@@ -149,3 +149,7 @@ a:hover {
     align-items: center;
     justify-content: space-around;
 }
+.text-erro, .text-erro:focus {
+    border-color: red;
+    caret-color: red;
+}

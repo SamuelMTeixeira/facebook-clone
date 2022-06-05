@@ -1,4 +1,8 @@
 /* REFERENTES AO INDEX.PHP DO /USUARIO */
+:root {
+    --azulBackground: #1876f2;
+    --gbFundo: #f2f2f2;
+}
 .corpo-site {
     margin-top: 55px;
 }
@@ -89,13 +93,17 @@
 }
 
 .color-verde,
-.color-verde:hover {
+.color-verde:hover{
     color: green;
 }
 
 .color-amarelo,
 .color-amarelo:hover {
-    color: #ddce00;
+    color: #fdec00;
+}
+
+.color-cinza, .color-cinza:hover{
+    color: #828282;
 }
 
 .btn-vermelho,
@@ -327,12 +335,66 @@
     color: #a8a8a8;
 }
 
-.menu-sub-opc img {
-    cursor: pointer;
-    width: 25px;
+.opc-btn-pub .btn {
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
 }
-
-.menu-sub-opc button {
+.opc-btn-pub .btn:hover {
+    background-color: var(--gbFundo);
+}
+.opc-btn-pub button svg, .opc-btn-pub span svg {
+    width: 1.3em;
+    height: 1.3em;
+}
+#btn-ver-mais {
+    border: none;
     border-radius: 30px;
-    background: none;
+    padding: 5px;
+}
+#btn-ver-mais:hover {
+    background-color: var(--gbFundo);
+}
+#btn-ver-mais svg {
+    color: 	#7e7e7e;
+    width: 1.5em;
+    height: 1.5em;
+}
+.form-select-pequeno {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #e4e6eb;
+    cursor: pointer;
+}
+.btn:disabled {
+    cursor: not-allowed;
+}
+.preview-img {
+    margin: 10px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.preview-img div {
+    margin-right: 10px;
+}
+.preview-img div img{
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.preview-img div button{
+    background-color: white;
+    border-radius: 20px;
+    padding: 2px;
+}
+.preview-img div button:hover{
+    background-color: var(--gbFundo);
+}
+.preview-img div .btn-excluir-img {
+    position: absolute;
 }

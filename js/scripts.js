@@ -66,3 +66,4 @@ document.getElementById("search-for").addEventListener('keyup', function (e) {
         document.location.href = 'https://www.google.com';
     }
 });
+

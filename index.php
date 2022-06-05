@@ -13,7 +13,6 @@
     <!-- Bootstrap Ícones -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
-
     <!-- Custumização CSS -->
     <link rel="stylesheet" href="css/login.css">
 
@@ -30,15 +29,24 @@
                 <img src="imgs/logo.svg" style="width: 290px;">
                 <h3>O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.</h3>
             </div>
-
             <div class="col-md-12 col-lg-6">
                 <div class="box-login">
                     <form method="post" action="logar.php">
-                        <input class="form-control campo-dados" type="text" name="email" placeholder="Informe seu email" required>
-                        <input class="form-control campo-dados" type="password" name="senha" placeholder="Informe sua senha" required>
-                        <input class="btn btn-primary btn-lg w-100" type="submit" value="Entrar">
-                        <a href="#" class="nav-link">Esqueceu a senha?</a>
-                    </form>
+                        <?php
+                        # SE O LOGIN ESTIVER ERRADO, EXIBE O FORMULARIO SUBLINHADO DE VERMELHO
+                        if (isset($_GET['login'])) {
+                            echo "<input class='form-control campo-dados text-erro' type='text' name='email' placeholder='Informe seu email' required>";
+                            echo "<input class='form-control campo-dados text-erro' type='password' name='senha' placeholder='Informe sua senha' required>";
+                            echo "<div class='alert alert-danger d-flex align-items-center' role='alert'><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-exclamation-triangle-fill' viewBox='0 0 16 16'><path d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z' /></svg><div class='ms-2'>Login ou senha incorretos</div></div>";
+                            echo "<input class='btn btn-primary btn-lg w-100' type='submit' value='Entrar'>";
+                        } else {
+                            echo "<input class='form-control campo-dados' type='text' name='email' placeholder='Informe seu email' required>";
+                            echo "<input class='form-control campo-dados' type='password' name='senha' placeholder='Informe sua senha' required>";
+                            echo "<input class='btn btn-primary btn-lg w-100' type='submit' value='Entrar'>";
+                        }
+                        ?>
+                        <a href="#" class="nav-link text-primary">Esqueceu a senha?</a>
+                    </form>                 
 
                     <hr>
                     <div class="container-fluid d-flex justify-content-center">
@@ -120,7 +128,6 @@
                             </div>
                         </div>
 
-
                         <p class="txt-desc mt-3">Ao clicar em Cadastre-se, você concorda com nossos Termos, Política de Dados e Política de Cookies. Você poderá receber notificações por SMS e cancelar isso quando quiser.</p>
                     </div>
                     <div class="modal-footer">
@@ -134,5 +141,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 </body>
-
 </html>

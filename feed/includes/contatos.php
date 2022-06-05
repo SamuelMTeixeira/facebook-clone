@@ -40,18 +40,18 @@
                 <a href="#" class="opc-atv">
                     <span class="d-p-flex">
                         <img src="../imgs/perfil-undefined.png" class="img-perfil-contato">
-                        <p>Joao kkkk</p>
+                        <p>Pessoa 1</p>
                     </span>
                 </a>
                 <a href="#" class="opc-atv">
                     <span class="d-p-flex">
                         <img src="../imgs/perfil-undefined.png" class="img-perfil-contato">
-                        <p>Outro Joao kkkk</p>
+                        <p>Pessoa 2</p>
                     </span>
                 </a><a href="#" class="opc-atv">
                     <span class="d-p-flex">
                         <img src="../imgs/perfil-undefined.png" class="img-perfil-contato">
-                        <p>Mais um Joao kkkk</p>
+                        <p>Pessoa 3</p>
                     </span>
                 </a>
 

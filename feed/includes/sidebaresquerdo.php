@@ -11,7 +11,7 @@
 
         <a href="#" class="opc-atv">
             <span class="d-p-flex">
-            <?php echo "<img class='img-perfil' src='"."../perfil/". $username . "/foto-perfil.jpg"."' alt='foto-do-perfil'>";?>
+            <?php echo "<img class='img-perfil' src='" . "../media/photo/" . $username . ".jpg"."' alt='foto-do-perfil'>";?>
                 <?php echo "<p>" . $nomeUsuario . "</p>";  ?>
             </span>
         </a>
