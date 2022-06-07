@@ -1,3 +1,10 @@
+:root {
+    --azulBackground: #1876f2;
+    --gbFundo: #f2f2f2;
+    --tituloComum: #65676B;
+    --textoComum: #000000;
+}
+
 aside {
     position: fixed;
 
@@ -19,29 +26,47 @@ aside::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 
-.aside-esq img {
-    width: 28px;
-    height: 28px;
-}
-
-.aside-esq a {
-    text-decoration: none;
-    color: black;
-}
-
-.d-p-flex {
-    display: flex;
-    text-align: center;
-    justify-content: flex-start;
-}
-
-.opc-atv {
+.aside-esq a, .aside-contato a {
     display: flex;
     align-items: center;
-
     padding: 10px;
-    margin-left: 5px;
-    margin-right: 2px;
+    margin: 1px;
+
+    color: var(--textoComum);
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.aside-esq a:hover, .aside-contato a:hover{
+    background-color: var(--gbFundo);
+    color: var(--textoComum);
+}
+
+.nav-item a:visited, .nav-item a:active, .nav-item a:link {
+    color: var(--textoComum);
+}
+
+.aside-esq a img,
+.aside-esq a svg, #btn-atv, .aside-contato a img, .aside-contato a svg {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border-radius: 20px;
+
+    object-fit: cover;
+}
+
+.aside-esq a p, .aside-contato a p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 10px;
 }
 
 hr {
@@ -49,124 +74,40 @@ hr {
     margin-right: 10px;
 }
 
-.opc-atv img {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    margin-right: 10px;
-    border-radius: 20px;
-    object-fit: cover;
-}
+#btn-atv img{
+    margin: 0 !important;
 
-.opc-atv p {
-    display: flex!important;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
-    font-size: 15px;
-    display: block;
-}
-
-.opc-atv:hover {
-    background-color: #f2f2f2;
-    border-radius: 10px;
-}
-
-.menu-opc-atv {
-    width: 30px;
-    height: 30px;
-    background-color: #e7e9ed;
+    width: 16px;
+    height: 16px;
 
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-
-    border: none;
-    border-radius: 30px;
 }
 
-.menu-opc-atv img {
-    width: 10px;
-    height: 10px;
-    margin-right: 8px;
-}
-
-#p-btn {
-    display: flex;
-    align-items: center;
-    margin-left: 12px !important;
-}
-
-.seus-atalhos span {
+.seus-atalhos span, .separar-por-aproximidade{
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.seus-atalhos span a {
-    color: #0077ff;
-    padding: 5px;
-}
-
-.seus-atalhos span a:hover {
-    background-color: #f2f2f2;
-    border-radius: 5px;
-}
-
-.seus-atalhos h3 {
-    color: #828282;
+.titulo {
+    color: var(--tituloComum);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
 }
 
-.rotacao {
-    transform: rotate(180deg);
-}
-
-.img-perfil-contato {
-    width: 28px;
-    height: 28px;
-    margin-top: 7px;
-}
-
-.contatos h3,
-.cabecalho-aniversario h3 {
-    color: #4F4F4F;
-    font-size: 20px;
-}
-
-.contatos .cabecalho-contato {
+.cabecalho-contato {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.contatos .cabecalho-contato span {
+.cabecalho-contato span svg {
     display: inline-block;
     cursor: pointer;
-}
 
-.contatos .cabecalho-contato span svg {
     width: 1.15em;
     height: 1.15em;
     margin-right: 5px;
-}
-
-.contatos .corpo-contato a {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    align-items: center;
-}
-
-.corpo-aniversario a,
-.corpo-aniversario a:hover {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    align-items: center;
-}
-
-.corpo-aniversario p {
-    text-align: justify;
 }

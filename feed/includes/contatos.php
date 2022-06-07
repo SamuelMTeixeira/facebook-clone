@@ -4,24 +4,23 @@
 <body>
     <aside class="aside-contato">
 
-        <div class="cabecalho-aniversario mt-3">
-            <h3 class="ms-3">Aniversários</h3>
-        </div>
+        <h3 class="ms-3 mt-3 titulo">Aniversários</h3>
 
-        <div class="corpo-aniversario">
-            <a href="#" class="">
-                <span class="d-p-flex">
-                    <img src="../icons/presente.png" class="img-perfil-contato ms-3">
-                    <p class="ms-3 me-3"><span style="font-weight: bold;">João e outras 3 pessoas</span> fazem aniversário hoje.</p>
-                </span>
-            </a>
-        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <img src="../icons/presente.png">
+                    <p>João e outras 3 pessoas fazem aniversário hoje.</p>
+                </a>
+            </li>
+        </ul>
 
+        <!-- ICONES INTERAÇÃO CONTATOS -->
         <hr class="me-2 ms-3">
         <div class="contatos">
-            <div class="cabecalho-contato">
-                <h3 class="me-5">Contatos</h3>
-                <span>
+            <div class="cabecalho-contato ms-3 me-3">
+                <h3 class="titulo">Contatos</h3>
+                <span class=".separar-por-aproximidade">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z" />
                     </svg>
@@ -35,30 +34,27 @@
                     </svg>
                 </span>
             </div>
-
-            <div class="corpo-contato">
-                <a href="#" class="opc-atv">
-                    <span class="d-p-flex">
-                        <img src="../imgs/perfil-undefined.png" class="img-perfil-contato">
-                        <p>Pessoa 1</p>
-                    </span>
-                </a>
-                <a href="#" class="opc-atv">
-                    <span class="d-p-flex">
-                        <img src="../imgs/perfil-undefined.png" class="img-perfil-contato">
-                        <p>Pessoa 2</p>
-                    </span>
-                </a><a href="#" class="opc-atv">
-                    <span class="d-p-flex">
-                        <img src="../imgs/perfil-undefined.png" class="img-perfil-contato">
-                        <p>Pessoa 3</p>
-                    </span>
-                </a>
-
-
-            </div>
         </div>
 
+        <!-- LISTA DE CONTATOS ONLINE -->
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <img src="../imgs/perfil-undefined.png">
+                    <p>Pessoa 1</p>
+                </a>
+
+                <a class="nav-link" href="#">
+                    <img src="../imgs/perfil-undefined.png">
+                    <p>Pessoa 2</p>
+                </a>
+
+                <a class="nav-link" href="#">
+                    <img src="../imgs/perfil-undefined.png">
+                    <p>Pessoa 1</p>
+                </a>
+            </li>
+        </ul>
 
     </aside>
 </body>

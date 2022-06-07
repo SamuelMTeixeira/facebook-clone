@@ -164,7 +164,7 @@ $username = $usuario['username'];
 
                             // SE NÃO HOUVER NENHUM POST
                             if (mysqli_num_rows($resultado) < 1) {
-                                echo "<p class='text-center texto-conclusao mt-4'>Isso é tudo por enquanto, adicione novos amigos para acompanhas suas públicações de perto!</p>";
+                                echo "<p class='text-center texto-conclusao mt-4'>Isso é tudo por enquanto, faça uma publicação ou adicione novos amigos para acompanhar suas publicações de perto!</p>";
                             }
                             // EXIBE TODOS OS POSTS
                             else {
